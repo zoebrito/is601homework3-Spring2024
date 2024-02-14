@@ -16,3 +16,4 @@ def test_multiplication():
 def test_division():
     '''Test that division function works '''
     assert divide(25,5) == 5
+    
