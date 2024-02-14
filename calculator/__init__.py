@@ -1,3 +1,7 @@
+# pylint: disable=missing-function-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=line-too-long
+
 """
 Calculator class that performs addition, subtraction, multiplication, and division
 Uses static methods meaning it doesn't require an instance to be called
