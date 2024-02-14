@@ -1,5 +1,5 @@
+# pylint: disable=W0621
 # pylint: disable=line-too-long
-# pylint: disable=unused-argument
 
 '''
 Tests for calculation history methods
@@ -33,6 +33,7 @@ def setup_calculations():
     Calculations.add_calculation(Calculation(Decimal('20'), Decimal('3'), subtract))
 
 def test_add_calculation(setup_calculations):
+    # pylint: disable=unused-argument
     """Test adding a calculation to the history."""
     # Create a new Calculation object to add to the history.
     calc = Calculation(Decimal('2'), Decimal('2'), add)
@@ -43,6 +44,7 @@ def test_add_calculation(setup_calculations):
     assert Calculations.get_latest() == calc, "Failed to add the calculation to the history"
 
 def test_get_history(setup_calculations):
+    # pylint: disable=unused-argument
     """Test retrieving the entire calculation history."""
     # Retrieve the calculation history.
     history = Calculations.get_history()
@@ -51,6 +53,7 @@ def test_get_history(setup_calculations):
     assert len(history) == 2, "History does not contain the expected number of calculations"
 
 def test_clear_history(setup_calculations):
+    # pylint: disable=unused-argument
     """Test clearing the entire calculation history."""
     # Clear the calculation history.
     Calculations.clear_history()
@@ -58,6 +61,7 @@ def test_clear_history(setup_calculations):
     assert len(Calculations.get_history()) == 0, "History was not cleared"
 
 def test_get_latest(setup_calculations):
+    # pylint: disable=unused-argument
     """Test getting the latest calculation from the history."""
     # Retrieve the latest calculation from the history.
     latest = Calculations.get_latest()
@@ -67,6 +71,7 @@ def test_get_latest(setup_calculations):
     assert latest.first_num == Decimal('20') and latest.second_num == Decimal('3'), "Did not get the correct latest calculation"
 
 def test_find_by_operation(setup_calculations):
+    # pylint: disable=unused-argument
     """Test finding calculations in the history by operation type."""
     # Find all calculations with the 'add' operation.
     add_operations = Calculations.find_by_operation("add")
