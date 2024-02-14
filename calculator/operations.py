@@ -24,4 +24,6 @@ def multiply(first_num: Decimal, second_num: Decimal) -> Decimal:
 
 def divide(first_num: Decimal, second_num: Decimal) -> Decimal:
     """Divide two numbers"""
+    if second_num == 0:
+        raise ValueError("Cannot divide by zero") # error catch for dividing by 0
     return first_num / second_num
