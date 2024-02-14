@@ -1,5 +1,5 @@
 """
-Performs addition and subtraction
+Performs addition, subtraction, multiplication, and division
 """
 
 def add(first_num, second_num):
