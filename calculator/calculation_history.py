@@ -1,4 +1,5 @@
 # pylint: disable=missing-class-docstring
+# pylint: disable=unused-import
 
 '''
 Class that maintains calculation history
