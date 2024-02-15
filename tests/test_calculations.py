@@ -2,21 +2,15 @@
 Tests for calculations.py
 '''
 
-from calculator.operations import add, multiply, subtract, divide
+from calculator.calculations import Calculation
 
-def test_addition():
-    '''Test that addition function works '''    
-    assert add(2,2) == 4
+def test_calculations():
+    '''tests for calculations class'''
+    calc = Calculation(10, 5)
+    assert calc.add() == 15
+    assert calc.subtract() == 5
+    assert calc.multiply() == 50
+    assert calc.divide() == 2
 
-def test_subtraction():
-    '''Test that subtraction function works '''    
-    assert subtract(2,2) == 0
-
-def test_multiplication():
-    '''Test that multiply works'''
-    assert multiply(2,2) == 4
-
-def test_division():
-    '''Test division'''
-    assert divide(2,2) == 1
-    
+if __name__ == "__main__":
+    test_calculations()
