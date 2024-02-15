@@ -1,7 +1,9 @@
 '''
 Basic operations class
 '''
+
 class Operations:
+    '''operations class for basic functions'''
     @staticmethod
     def add(first_num, second_num):
         """Add two numbers"""
